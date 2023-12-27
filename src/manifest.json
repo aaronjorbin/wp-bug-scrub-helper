@@ -1,0 +1,16 @@
+{
+	"manifest_version": 3,
+	"name": "WordPress.org Core Bug Scrub Helper",
+	"version": "0.0.1",
+	"description": "On WordPress plugins pages, show a button linking to the plugin's SVN repo under the .zip file download button.",
+	"icons": {
+		"16":  "wp-trac-mini.png",
+		"48":  "wp-trac-small.png",
+		"128": "wp-trac-large.png" },
+	"content_scripts": [
+		{
+			"matches": ["*://core.trac.wordpress.org/ticket/*" ],
+			"js": ["index.js"]
+		}
+	]
+}

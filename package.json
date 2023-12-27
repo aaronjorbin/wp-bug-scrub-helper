@@ -1,0 +1,65 @@
+{
+	"name": "wp-bug-scrub-helper",
+	"version": "0.0.1",
+	"description": "Helper for people scrubbing WordPress Bugs",
+	"author": "Aaron Jorbin",
+	"license": "MIT",
+	"keywords": [
+		"chrome-"
+	],
+	"homepage": "XXX",
+	"repository": {
+		"type": "git",
+		"url": "XXX"
+	},
+	"bugs": {
+		"url": "XXX"
+	},
+	"engines": {
+		"node": ">=20.10.0",
+		"npm": ">=10.2.3"
+	},
+	"npmpackagejsonlint": {
+		"extends": "@wordpress/npm-package-json-lint-config",
+		"rules": {
+			"valid-values-license": [
+				"error",
+				[
+					"MIT"
+				]
+			]
+		}
+	},
+	"jest": {
+		"testMatch": [
+			"**/test/**/*.js"
+		],
+		"testPathIgnorePatterns": [
+			".eslintrc.js"
+		],
+		"testEnvironment": "jsdom"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.19.0",
+		"concurrently": "^8.2.2",
+		"copy-webpack-plugin": "^11.0.0"
+	},
+	"scripts": {
+		"build": "WP_NO_EXTERNALS=true wp-scripts build",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses --prod",
+		"test:coverage": "wp-scripts test-unit-js --coverage",
+		"test:help": "wp-scripts test-unit-js --help",
+		"test:unit": "wp-scripts test-unit-js",
+		"test:watch": "wp-scripts test-unit-js --watch",
+		"test": "concurrently \"npm run check-engines\" \"npm run check-licenses\" \"npm run lint\" \"npm run test:unit\"",
+		"lint": "concurrently \"npm run lint:js\" \"npm run lint:pkg-json\"",
+		"lint:js": "wp-scripts lint-js",
+		"lint:fix": "wp-scripts lint-js --fix",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"start": "WP_NO_EXTERNALS=true wp-scripts start"
+	},
+	"dependencies": {
+		"@wordpress/npm-package-json-lint-config": "^4.33.0"
+	}
+}
