@@ -7,13 +7,13 @@
 	"keywords": [
 		"chrome-"
 	],
-	"homepage": "XXX",
+	"homepage": "https://github.com/aaronjorbin/wp-bug-scrub-helper",
 	"repository": {
 		"type": "git",
-		"url": "XXX"
+		"url": "git@github.com:aaronjorbin/wp-bug-scrub-helper.git"
 	},
 	"bugs": {
-		"url": "XXX"
+		"url": "https://github.com/aaronjorbin/wp-bug-scrub-helper/issues"
 	},
 	"engines": {
 		"node": ">=20.10.0",
