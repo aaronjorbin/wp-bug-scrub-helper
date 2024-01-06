@@ -40,6 +40,7 @@
 		"testEnvironment": "jsdom"
 	},
 	"devDependencies": {
+		"@wordpress/npm-package-json-lint-config": "^4.33.0",
 		"@wordpress/scripts": "^26.19.0",
 		"concurrently": "^8.2.2",
 		"copy-webpack-plugin": "^11.0.0"
@@ -58,8 +59,5 @@
 		"lint:fix": "wp-scripts lint-js --fix",
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"start": "WP_NO_EXTERNALS=true wp-scripts start"
-	},
-	"dependencies": {
-		"@wordpress/npm-package-json-lint-config": "^4.33.0"
 	}
 }
