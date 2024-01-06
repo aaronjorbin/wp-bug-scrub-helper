@@ -3,6 +3,7 @@ const getAllTemplates = () => {
 
 	templates.welcome = require( '../templates/welcome.js' );
 	templates.invalid = require( '../templates/invalid.js' );
+	templates.hacked = require( '../templates/hacked.js' );
 
 	return templates;
 };
